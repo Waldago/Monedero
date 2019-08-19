@@ -1,0 +1,45 @@
+package ejercicioClase4b;
+
+public class Monedero {
+	private double dinero;
+	
+	public Monedero() {
+		this.setDinero(0);
+	}
+	
+	public Monedero(double dinero) {
+		this.setDinero(dinero);
+	}
+	
+	public double ponerDinero(double p) {
+		this.dinero = this.dinero + p;
+		return this.dinero;
+		}
+	public void showDinero() {
+		System.out.println(this.dinero);
+	}
+	public double sacarDinero(double s) {
+		if (this.dinero>=s) {
+			return this.dinero=this.dinero-s;
+			//System.out.println(this.dinero);
+			//return this.dinero;
+		}
+		else {
+			System.out.println("NO TE ALCANZA LA PLATA");
+			return this.dinero;
+		}
+	}
+	@Override
+	public String toString() {
+		return "Monedero [dinero=" + dinero + "]";
+	}
+
+	public double getDinero() {
+		return dinero;
+	}
+
+	public void setDinero(double dinero) {
+		this.dinero = dinero;
+	}
+	
+}
