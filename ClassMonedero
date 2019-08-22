@@ -12,21 +12,20 @@ public class Monedero {
 	}
 	
 	public double ponerDinero(double p) {
-		this.dinero = this.dinero + p;
-		return this.dinero;
+		this.setDinero(this.getDinero() + p);
+		return this.getDinero();
 		}
 	public void showDinero() {
-		System.out.println(this.dinero);
+		System.out.println(this.getDinero());
 	}
 	public double sacarDinero(double s) {
-		if (this.dinero>=s) {
-			return this.dinero=this.dinero-s;
-			//System.out.println(this.dinero);
-			//return this.dinero;
+		if (this.getDinero()>=s) {
+			this.setDinero(this.getDinero()-s);
+			return this.getDinero();
 		}
 		else {
 			System.out.println("NO TE ALCANZA LA PLATA");
-			return this.dinero;
+			return this.getDinero();
 		}
 	}
 	@Override
